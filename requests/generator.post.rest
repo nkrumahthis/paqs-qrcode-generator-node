@@ -7,5 +7,6 @@ Content-Type: application/json
     "logo" : "",
     "mfgDate" : "31-12-2021",
     "expDate" : "31-12-2022",
-    "quantity" : 3
+    "quantity" : 3,
+    "format" : "png"
 }
