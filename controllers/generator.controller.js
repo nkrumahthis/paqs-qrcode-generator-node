@@ -1,14 +1,16 @@
-const post = (req, res) => {
-    // const data = req.body;
+const { generateItems } = require("../lib/item.lib");
 
-    // const productName = data.productName;
-    // const companyName = data.companyName;
-    // const logo = data.logo;
-    // const mfgDate = data.mfgDate;
-    // const expDate = data.expDate;
-    // const quantity = data.quantity;
+async function post(req, res) {
+    const data = req.body;
 
-    // const itemIds = await generateItems(productName, companyName, logo, mfgDate, expDate, quantity);
+    const productName = data.productName;
+    const companyName = data.companyName;
+    const logo = data.logo;
+    const mfgDate = data.mfgDate;
+    const expDate = data.expDate;
+    const quantity = data.quantity;
+
+    const itemIds = await generateItems(productName, companyName, logo, mfgDate, expDate, quantity);
     // const qrImages = generateQRs(itemIds);
     // const zipFile = zipUp(qrImages);
 
@@ -16,7 +18,7 @@ const post = (req, res) => {
     //     console.error(err)
     // })
 
-    res.send("POST on /generator")
+    res.send(itemIds)
 }
 
 module.exports.post = post;
