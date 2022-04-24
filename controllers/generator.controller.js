@@ -1,5 +1,6 @@
 const { generateItems } = require("../lib/item.lib");
 const { generateQRs } = require("../lib/qr.lib")
+const { zipUp } = require("../lib/zip.lib")
 
 async function post(req, res) {
     const data = req.body;
@@ -19,13 +20,11 @@ async function post(req, res) {
 
     const itemIds = await generateItems(productName, companyName, logo, mfgDate, expDate, quantity);
     const qrImages = await generateQRs(itemIds, format);
-    // const zipFile = zipUp(qrImages);
+    const zipFile = await zipUp(qrImages);
 
-    // res.sendFile(zipFile, err => {
-    //     console.error(err)
-    // })
-
-    res.send(qrImages)
+    res.sendFile(zipFile, err => {
+        console.error(err)
+    })
 }
 
 function validate(data) {
