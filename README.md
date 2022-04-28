@@ -6,11 +6,10 @@ QR code generator for the PAQS Project
 
 1. Clone this repo
 2. run `npm install`
-3. create a .env file with content like this
+3. create a .env file the MONGO_URI set to your [connection string](https://www.mongodb.com/docs/manual/reference/connection-string/)
 
 ```env
-MONGO_USER=username
-MONGO_PASSWORD=password
+MONGO_URI = mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]
 ```
 
 4. run `npm start`
