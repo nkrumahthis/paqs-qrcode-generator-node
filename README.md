@@ -34,3 +34,15 @@ Send a `POST` request to `/generator` with following body
 ```
 
 And you will receive a zip file that you must download
+
+## Done
+
+- items data generated
+- raw qr code image files generated. currently supports png and svg. not jpg
+- zip file created with images
+
+## Todo
+
+- id is not yet all integers
+- retrieve item data, given id
+- log item usage using product id and user location
