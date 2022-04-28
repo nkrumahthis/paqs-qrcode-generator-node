@@ -1,0 +1,12 @@
+POST http://localhost:5000/generator HTTP/1.1
+Content-Type: application/json
+
+{
+    "productName" : "alewa",
+    "companyName" : "osa",
+    "logo" : "",
+    "mfgDate" : "31-12-2021",
+    "expDate" : "31-12-2022",
+    "quantity" : 3,
+    "format" : "png"
+}
