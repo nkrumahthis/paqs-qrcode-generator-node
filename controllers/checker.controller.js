@@ -3,8 +3,8 @@ const { getItemData, logItemUsage } = require("../lib/item.lib");
 const get = async (req, res) => {
     // const requestData = req.body;
 
-    // const productId = requestData.productId;
-    // const userLocation = requestData.userLocation;
+    const productId = requestData.productId;
+    const userLocation = requestData.userLocation;
 
     // const itemData = await getItemData(productId);
 
